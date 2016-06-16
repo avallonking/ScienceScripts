@@ -1,0 +1,15 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+avoid_the_first	/data/home/lijiaj/operation/scripts/bqsrRStat.Generator.py	/^            avoid_the_first = 0$/;"	v	language:Python
+avoid_the_first	/data/home/lijiaj/operation/scripts/bqsrRStat.Generator.py	/^avoid_the_first = 1$/;"	v	language:Python
+bidle	/data/home/lijiaj/operation/scripts/idleReport.sh	/^bidle () {$/;"	f	language:Sh
+extractMapq	/data/home/lijiaj/operation/scripts/mapqExtract.sh	/^function extractMapq()$/;"	f	language:Sh
+fa	/data/home/lijiaj/operation/scripts/fq2fa.py	/^        fa = open((file[0:10]+'.fasta'),'w')$/;"	v	language:Python
+filelist	/data/home/lijiaj/operation/scripts/fq2fa.py	/^filelist = ['NIST7086.1.fastq','NIST7086.2.fastq','NIST7035.1.fastq','NIST7035.2.fastq']$/;"	v	language:Python
+filename	/data/home/lijiaj/operation/scripts/bqsrRStat.Generator.py	/^        filename = line.split(' ')[3]$/;"	v	language:Python
+fq	/data/home/lijiaj/operation/scripts/fq2fa.py	/^        fq = open(file,'r')$/;"	v	language:Python
+log	/data/home/lijiaj/operation/scripts/bqsrRStat.Generator.py	/^log = open('stat.log','r')$/;"	v	language:Python
+script	/data/home/lijiaj/operation/scripts/bqsrRStat.Generator.py	/^script = open('bqsrStat.R','w')$/;"	v	language:Python
+tag	/data/home/lijiaj/operation/scripts/fq2fa.py	/^                tag = 0$/;"	v	language:Python
+tag	/data/home/lijiaj/operation/scripts/fq2fa.py	/^                tag = 1$/;"	v	language:Python
+varname	/data/home/lijiaj/operation/scripts/bqsrRStat.Generator.py	/^        varname = filename.split('.')[0] + filename.split('.')[1]$/;"	v	language:Python
+varname	/data/home/lijiaj/operation/scripts/bqsrRStat.Generator.py	/^varname = ''$/;"	v	language:Python
