@@ -18,12 +18,15 @@ for i in $sampleDir/$depth\X/*
 do
   test -d $i || continue
   sample=`echo $i | rev | cut -d / -f 1 | rev`
-  mkdir -p $resultDir/$depth\X/$sample
+  mkdir -p $resultDir/$depth\X/$sample/gatk
+  mkdir -p $resultDir/$depth\X/$sample/sentieon
   for (( t = 1; t < 51; t++ )); 
   do
     #EBV
-    java -jar /data/home/lijiaj/software/picard-tools-2.2.1/picard.jar GenotypeConcordance CALL_VCF=$i/$t/genotyped.$sample.$t.EBV.vcf CALL_SAMPLE=$sample TRUTH_VCF=$gatkTruth/$sample.EBV.vcf TRUTH_SAMPLE=$sample O=$resultDir/$depth\X/$sample/$t.EBV
+    java -jar /data/home/lijiaj/software/picard-tools-2.2.1/picard.jar GenotypeConcordance CALL_VCF=$i/$t/genotyped.$sample.$t.EBV.vcf CALL_SAMPLE=$sample TRUTH_VCF=$gatkTruth/$sample.EBV.vcf TRUTH_SAMPLE=$sample O=$resultDir/$depth\X/$sample/gatk/$t.gatk.EBV
+    java -jar /data/home/lijiaj/software/picard-tools-2.2.1/picard.jar GenotypeConcordance CALL_VCF=$i/$t/genotyped.$sample.$t.EBV.vcf CALL_SAMPLE=$sample TRUTH_VCF=$senTruth/$sample.EBV.vcf TRUTH_SAMPLE=$sample O=$resultDir/$depth\X/$sample/sentieon/$t.sentieon.EBV
     #human
-    java -jar /data/home/lijiaj/software/picard-tools-2.2.1/picard.jar GenotypeConcordance CALL_VCF=$i/$t/genotyped.$sample.$t.human.vcf CALL_SAMPLE=$sample TRUTH_VCF=$gatkTruth/$sample.human.vcf TRUTH_SAMPLE=$sample O=$resultDir/$depth\X/$sample/$t.human
+    java -jar /data/home/lijiaj/software/picard-tools-2.2.1/picard.jar GenotypeConcordance CALL_VCF=$i/$t/genotyped.$sample.$t.human.vcf CALL_SAMPLE=$sample TRUTH_VCF=$gatkTruth/$sample.human.vcf TRUTH_SAMPLE=$sample O=$resultDir/$depth\X/$sample/gatk/$t.gatk.human
+    java -jar /data/home/lijiaj/software/picard-tools-2.2.1/picard.jar GenotypeConcordance CALL_VCF=$i/$t/genotyped.$sample.$t.human.vcf CALL_SAMPLE=$sample TRUTH_VCF=$senTruth/$sample.human.vcf TRUTH_SAMPLE=$sample O=$resultDir/$depth\X/$sample/sentieon/$t.sentieon.human
   done
 done
